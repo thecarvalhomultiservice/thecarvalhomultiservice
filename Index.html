@@ -1,0 +1,427 @@
+<!DOCTYPE html><html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="blue">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="og:title" content="The Carvalho">
+  <meta name="origin" content="The Carvalho">
+  <meta name="description" content="The Carvalho é um site desenvolvido especialmente pra teres as informacões da empresa de servico de limpeza e muito mais!">
+  <meta name="keywords" content="multiservice,The Carvalho,contato,limpeza,luanda,sercivos,facebook,instagram,x.com,whatsapp,thread,me">
+  <meta name="author" content="Gualter Francisco">
+  <title>The Carvalho multiservice</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: white;
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      
+    }
+
+header {
+  height: 20vh;
+  height:140px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('9.jpeg');
+  background-size: contain; /* mostra a imagem inteira */
+  background-repeat: no-repeat;
+  background-position: left;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: center;
+  padding: 0px;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  animation: fadeInDown 1s ease;
+  padding:50px;
+  text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.7);
+   }
+  .intro h2{
+  position: relative;
+  z-index: 1;
+  padding: 50px;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  animation: fadeInDown 1s ease;
+  color: #333;
+    text-align:left;
+  overflow: hidden;
+  min-height: 60vh; /* ou altura suficiente para ver a imagem */
+}
+
+/* camada da imagem de fundo */
+.intro h2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('14.jpg');
+  background-size: contain; /* ou cover */
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(2px);
+  z-index: -1;
+  opacity: 1;
+}
+    .section, #detalhes, #cursos, #login, #sobre {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: none;
+    animation: fadeInDown 1s ease;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+      color: #222;
+    }
+
+    .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 0 0 30px;
+  overflow: hidden;
+  transition: transform 1.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 60.12);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.card button {
+  margin: 20px;
+  align-self: center;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.card button:hover {
+  background-color: black;
+}
+
+    nav {
+      position: sticky;
+      bottom: 0;
+      width: 100%;
+      background: #111;
+      display: flex;
+      justify-content: space-around;
+      padding: 15px 0;
+      border-top: 1px solid #333;
+      z-index: 99;
+    }
+    nav a {
+      color: #eee; text-decoration: none;
+      font-size: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+    nav a:hover { color: #00ffcc; }
+    nav a::after {
+      content: '';
+      display: block;
+      width: 0%;
+      height: 2px;
+      background: #00ffcc;
+      transition: width 0.3s ease;
+      margin-top: 5px;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    footer {
+      background: #111;
+      color: #eee;
+      text-align: center;
+      padding: 40px 20px 60px;
+      margin-top: auto;
+    }
+    .social-icons {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .social-icons a {
+      color: #00ffcc;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .btn-voltar {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: darkred;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      nav a { font-size: 0.9rem; }
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <header id="inicio">
+  </header>
+  <div class="intro">
+    <h2>The Carvalho <mark>multiservice.<br></mark>Tenha um ambiente sem sujeira, a sujeira <mark>Mata!</mark></h2>
+  </div>
+  <section class="section" id="servicos">
+    <h4 class="section-title"><u>O que oferecemos</u></h4>
+    <div class="cards">
+      
+      
+      <div class="card">
+        <img src="1.jpg" alt="Limpeza Profissional">
+        <div class="card-content">
+          <h3>Limpeza Profissional</h3>
+          <p>Limpeza Profissional
+Realizamos limpezas de residências, edifícios, condomínios, escritórios e espaços comerciais, com atenção especial à higiene, organização e bem-estar.  </p>
+        </div>
+        <a href="tel:+244929958224">
+        <button>Solicitar</button></a>
+      </div>
+      <div class="card">
+        <img src="2.jpg" alt="Limpezas pós eventos">
+        <div class="card-content">
+          <h3>Limpezas pós eventos</h3>
+          <p>Limpeza Pós-eventos
+Deixe a limpeza connosco! Após festas, conferências ou eventos sociais, a nossa equipa entra em ação para restaurar o espaço à sua melhor forma.
+          </p>
+        </div>
+        <a href="tel:+244929958224">
+        <button>Solicitar</button></a>
+       </div>
+      <div class="card">
+        <img src="3.jpg" alt="Lavagem de Tapetes">
+        <div class="card-content">
+          <h3>Lavagem de Tapetes</h3>
+          <p>Lavamos tapetes de vários tamanhos com cuidado e eficiência, respeitando os materiais e a estética de cada peça.
+          </p>
+        </div>
+        <a href="tel:+244929958224">
+        <button>Solicitar</button></a>
+       </div>
+      <div class="card">
+        <img src="4.jpg" alt="Serviços de Protocolo">
+        <div class="card-content">
+          <h3>Serviços de Protocolo</h3>
+          <p>Protocolo de Eventos
+Recebemos e orientamos convidados com elegância, etiqueta e simpatia. O primeiro impacto é a nossa prioridade.
+          </p>    
+        </div>
+        <a href="tel:+244929958224">
+        <button>Solicitar</button></a>
+       </div>
+            <div class="card">
+        <img src="5.jpg" alt="Serviços de Protocolo">
+        <div class="card-content">
+          <h3>Serviços de Garçom</h3>
+          <p>Serviço de Garçom
+Disponibilizamos garçons treinados, com apresentação profissional e postura adequada para qualquer tipo de evento.
+  </p>    
+        </div>
+        <a href="tel:+244929958224">
+        <button>Solicitar</button></a>
+         </div>
+            <div class="card">
+        <img src="6.jpg" alt="Serviços de Cuidados">
+        <div class="card-content">
+          <h3>Serviços de Cuidados</h3>
+          <p>Babysitting e Cuidados Domiciliários
+Cuidamos de quem mais importa com responsabilidade, atenção e carinho. Ideal para famílias que valorizam confiança e segurança.
+   </p>    
+        </div>
+        <a href="tel:+244929958224">
+        <button>Solicitar</button></a>
+          </div>
+            <div class="card">
+        <img src="7.jpg" alt="Serviços Domésticos">
+        <div class="card-content">
+          <h3>Serviços de Domésticos</h3>
+          <p>Serviços Domésticos e Corporativos
+Seja para residências ou empresas, temos soluções práticas e confiáveis para o dia a dia, de forma ocasional ou contínua.
+</p>    
+        </div>
+        <a href="tel:+244929958224">
+        <button>Solicitar</button></a>
+           </div>
+            <div class="card">
+        <img src="9.jpeg" alt="Serviços de Protocolo">
+        <div class="card-content">
+          <h3>Outros Serviços</h3>
+          <p>Para outras atividades, soluções e muito mais</p>    
+        </div>
+        <a href="tel:+244929958224">
+        <button>Solicitar</button></a>
+       </div>
+ 
+    </div>
+  </section>
+
+  <section id="detalhes">
+    <h2 id="titulo-detalhe">Detalhes do serviço</h2>
+    <p id="conteudo-detalhe">Conteúdo completo sobre o serviço...</p>
+    <button class="btn-voltar" onclick="voltar()">Voltar</button>
+  </section>
+
+  <!-- Abas extras -->
+  <section id="cursos">
+    <h2 class="section-title">Recursos</h2>
+    <p>Por que Escolher a <b>The Carvalho</b>?<br>
+
+Profissionais Treinados.<br>
+Serviços Personalizados.<br>
+Preços Justos. <br>
+Compromisso com a Qualidade. <br>
+Atendimento Rápido e Atencioso.<br>
+Esteja onde estiver, nós chegamos até você.
+    </p>   </section>
+
+  <section id="login">
+    <h2 class="section-title">Contato</h2>
+    <p>
+ Fale Connosco:<br>
+Telefone: +244929958224 <br>
+WhatsApp: +244 945 046 450 <br>
+Email: elhisacarvalho@gmail.com <br>
+Email: The_Carvalho_multiservice@gmail.com
+
+   </p> </section>
+
+  <section id="sobre">
+    <h2 class="section-title">Sobre Nós</h2>
+    <p>Na <b>The Carvalho </b>Prestações de Serviços, somos especialistas em soluções completas para limpeza e apoio a eventos. Atuamos com profissionalismo, eficiência e atenção aos detalhes, garantindo ambientes limpos, acolhedores e organizados, tanto para espaços residenciais como corporativos.
+
+Com sede no Zango 8.000, Luanda, oferecemos serviços personalizados, com equipas treinadas e comprometidas com a satisfação dos nossos clientes. Esteja onde estiver, nós chegamos até você!
+    </p>
+  </section>
+
+  <footer>
+    <h4>THE CARVALHO © 2025</h4>
+    <p>Todos os direitos reservados</p>
+    <h5><em><mark>Gualter Francisco</mark></em></h5>
+    <div class="social-icons">
+      <a href="#"><i class="ri-instagram-line"></i></a>
+      <a href="#"><i class="ri-facebook-box-line"></i></a>
+      <a href="elhisacarvalho@gmail.com "><i class="ri-mail-line"></i></a>
+    </div>
+  </footer>
+
+  <nav>
+    <a onclick="mostrarAba('inicio')"><i class="ri-home-4-line"></i><span>Início</span></a>
+    <a onclick="mostrarAba('cursos')"><i class="ri-book-open-line"></i><span>Recursos</span></a>
+    <a onclick="mostrarAba('login')"><i class="ri-user-line"></i><span>Contatos</span></a>
+    <a onclick="mostrarAba('sobre')"><i class="ri-information-line"></i><span>Sobre</span></a>
+  </nav>
+
+  <script>
+    function abrirDetalhes(servico) {
+      esconderTodas();
+      document.getElementById('detalhes').style.display = 'block';
+      document.getElementById('titulo-detalhe').innerText = servico;
+      document.getElementById('conteudo-detalhe').innerText = "Aqui vai o conteúdo completo sobre o serviço de " + servico + ".";
+    }
+
+    function voltar() {
+      mostrarAba('inicio');
+    }
+
+    function mostrarAba(id) {
+      esconderTodas();
+      if (id === 'inicio') {
+        document.getElementById('inicio').style.display = 'flex';
+        document.getElementById('servicos').style.display = 'block';
+      } else {
+        document.getElementById(id).style.display = 'block';
+      }
+    }
+
+    function esconderTodas() {
+      const seções = ['inicio', 'servicos', 'detalhes', 'cursos', 'login', 'sobre'];
+      seções.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+    }
+
+    // Mostrar tela principal ao carregar
+    window.onload = () => {
+      mostrarAba('inicio');
+    };
+  </script>
+</body>
+</html>
